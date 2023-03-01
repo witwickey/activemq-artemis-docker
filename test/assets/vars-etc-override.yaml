@@ -1,0 +1,5 @@
+
+flags:
+  testmerge: true
+
+hostname: testHostName.local

@@ -1,0 +1,32 @@
+language: bash
+services: docker
+
+env:
+  - VERSION=2.17.0
+  - VERSION=2.18.0
+  - VERSION=2.19.0
+  - VERSION=2.20.0
+
+before_install:
+  - curl -L https://goss.rocks/install | sudo sh
+
+install:
+  - git clone https://github.com/qoricode/activemq-artemis-docker.git ~/activemq-artemis-docker
+
+before_script:
+  - versionTag="${VERSION}${VARIANT:+-${VARIANT}}"
+  - if [[ $TRAVIS_PULL_REQUEST == "false" ]] && [[ $TRAVIS_BRANCH == "master" ]]; then echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin; fi
+
+script:
+  - |
+    (
+      set -Eeuo pipefail
+      set -x
+      travis_retry make $versionTag 
+      echo ---------------------------
+      echo $TRAVIS_PULL_REQUEST
+      echo $TRAVIS_BRANCH
+      echo ---------------------------
+      if [[ $TRAVIS_PULL_REQUEST == "false" ]] && [[ $TRAVIS_BRANCH == "master" ]]; then travis_retry make push_$versionTag; fi
+    )
+

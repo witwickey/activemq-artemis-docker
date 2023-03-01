@@ -1,0 +1,9 @@
+Repository,Tag,Base Image,Aliases,Dockerfile
+qoricode/activemq-artemis,2.17.0,openjdk:11.0.14-jre-bullseye,qoricode/activemq-artemis:2.17-latest qoricode/activemq-artemis:2-latest qoricode/activemq-artemis:latest,Dockerfile
+qoricode/activemq-artemis,2.18.0,openjdk:11.0.14-jre-bullseye,qoricode/activemq-artemis:2.18-latest qoricode/activemq-artemis:2-latest qoricode/activemq-artemis:latest,Dockerfile
+qoricode/activemq-artemis,2.19.0,openjdk:11.0.14-jre-bullseye,qoricode/activemq-artemis:2.19-latest qoricode/activemq-artemis:2-latest qoricode/activemq-artemis:latest,Dockerfile
+qoricode/activemq-artemis,2.20.0,openjdk:11.0.14-jre-bullseye,qoricode/activemq-artemis:2.20-latest qoricode/activemq-artemis:2-latest qoricode/activemq-artemis:latest,Dockerfile
+qoricode/activemq-artemis,2.21.0,openjdk:11.0.14-jre-bullseye,qoricode/activemq-artemis:2.21-latest qoricode/activemq-artemis:2-latest qoricode/activemq-artemis:latest,Dockerfile
+qoricode/activemq-artemis,2.22.0,openjdk:11.0.15-jre-bullseye,qoricode/activemq-artemis:2.22-latest qoricode/activemq-artemis:2-latest qoricode/activemq-artemis:latest,Dockerfile
+qoricode/activemq-artemis,2.24.0,openjdk:11.0.15-jre-bullseye,witwickey/activemq-artemis:2.24.0,Dockerfile
+witwickey/activemq-artemis,2.26.0,openjdk:11.0.15-jre-bullseye,witwickey/activemq-artemis:2.26.0,Dockerfile
